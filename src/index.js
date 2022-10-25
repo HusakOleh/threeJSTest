@@ -1,14 +1,10 @@
 import * as THREE from 'three';
-import figureLibrary from "./FigureLibrary";
-
-import camera from "./Camera";
-import renderer from "./Renderer";
-
-import scene from "./Scene";
-import light from "./AmbientLight";
-
-import gridHelper from "./GridHelper";
-
+import { figureLibrary } from "./FigureLibrary";
+import { camera } from "./Camera";
+import { renderer } from "./Renderer";
+import { scene } from "./Scene";
+import { light } from "./AmbientLight";
+import { gridHelper } from "./GridHelper";
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
 const controls = new OrbitControls( camera, renderer.domElement );
@@ -28,7 +24,7 @@ const workField = document.querySelector('#workField');
 const library = document.querySelector('#program__library');
 
 library.addEventListener('dragstart', event => {
-
+  event.dataTransfer.setData('transferObj', event.target.id);
 })
 
 workField.addEventListener("dragover", (event) => {
@@ -45,9 +41,6 @@ window.addEventListener('drop', event => {
   plane.setFromNormalAndCoplanarPoint(planeNormal, scene.position);
   raycaster.setFromCamera( pointer, camera );
   raycaster.ray.intersectPlane(plane, intersectionPoint)
-
-
-
 
   const transferObj = event.dataTransfer.getData('transferObj');
   figureLibrary.forEach(el => {

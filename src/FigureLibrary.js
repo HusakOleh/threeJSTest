@@ -1,9 +1,7 @@
-import box from "./Box";
-import sphere from "./Sphere";
+import { box } from "./Box";
+import { sphere } from "./Sphere";
 
-const figureLibrary = [];
+export const figureLibrary = [];
 
 figureLibrary.push(box);
 figureLibrary.push(sphere);
-
-export default figureLibrary;
