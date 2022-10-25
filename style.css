@@ -1,0 +1,47 @@
+
+
+body {
+  margin: 0;
+}
+
+.program {
+  display: flex;
+  flex-direction: row;
+  /*background: yellow;*/
+  height: 100vh;
+  width: 100%;
+}
+
+.program__library {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 100%;
+  margin-right: 6px;
+  flex-shrink: 0;
+}
+
+.program__library-item {
+  width: 100%;
+  height: 200px;
+  padding: 20px;
+  /*border: 1px solid #fff;*/
+  box-sizing: border-box;
+}
+
+.program__library-item > h1 {
+  margin: 0;
+  text-align: center;
+  font-family: "Arial Narrow", sans-serif;
+}
+
+.program__library-item-img {
+  max-width: 100%;
+  object-fit: contain;
+}
+
+
+.program__work-field {
+  flex-grow: 1;
+  /*background: purple;*/
+}

@@ -6,6 +6,9 @@ import renderer from "./Renderer";
 
 import scene from "./Scene";
 import light from "./AmbientLight";
+
+import gridHelper from "./GridHelper";
+
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
 const controls = new OrbitControls( camera, renderer.domElement );
@@ -13,6 +16,7 @@ camera.position.set( 10, 5, 0 );
 controls.update();
 
 scene.add( light );
+scene.add( gridHelper );
 
 const pointer = new THREE.Vector2();
 const intersectionPoint = new THREE.Vector3();

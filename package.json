@@ -1,0 +1,26 @@
+{
+  "name": "proj",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "build": "webpack watch --mode=development  --config webpack.config.js",
+//    "prod": "webpack --mode=production --config webpack.config.js",
+
+    "start": " SET NODE_ENV=development &  node ./bin/server",
+    "qa2": "SET NODE_ENV=qa2 & node ./bin/server",
+    "prod": "SET NODE_ENV=production & node ./bin/server"
+
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  },
+  "dependencies": {
+    "bulma": "^0.9.4",
+    "three": "^0.145.0"
+  }
+}
